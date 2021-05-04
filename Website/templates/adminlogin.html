@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADMIN LOGIN</title>
+</head>
+<body>
+{% extends "home.html" %}
+{% block content %}
+<form method="POST" style="border:4px solid white; margin:1%; padding:1%">
+    <h3 align="center" class="text-white">ADMIN LOGIN</h3>
+    <div class="container text-white">
+    <div class="form-group">
+        <label for="email">Email ID: </label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password : </label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
+
+{% endblock %}
+</body>
+</html>

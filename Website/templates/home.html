@@ -1,0 +1,143 @@
+<html>
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Titanic Journey Simulation</title>
+
+</head>
+<body style="background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(static/1161773.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size: cover;
+	background-position: center;
+    backdrop-filter: blur(2px);
+    ">
+<header>
+<!-- script declare here-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!-- script declare end -->
+
+<!-- navigation bar -->
+<nav class="navbar navbar-expand-lg bg-black navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TSP APP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" id="home" href="/">HOME</a>
+        <a class="nav-item nav-link" id="about" href="/about">ABOUT</a>
+        <a class="nav-item nav-link" id="contact" href="/contact">CONTACT</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- navigation bar end -->
+
+</header>
+<!-- message flash settings -->
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category == 'error' %}
+<div class="alert alert-danger alert-dismissible" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+        &times;
+    </button>
+</div>
+  {% else %}
+<div class="alert alert-success alert-dismissible" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+        &times;
+    </button>
+</div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+<!-- message flash settings end -->
+
+<!-- page content -->
+{% block content %}
+<h1 class="text-light text-center">TITANIC SURVIVAL PREDICTION </h1>
+<br>
+    <div class="container">
+  <h4 class="text-white text-center">Have you ever thought of being one of the passengers on the Titanic?. Would you survive? Would your children or family member survive?
+We are often told that women and children were given priority to the lifeboats,but I was not satisfied with this short,qualitative answer.That's why I built this app.
+  </h4>
+<br>
+  <h2 class ="text-info">"Curiosity is the wick in the candle of learning" - William Arthur Ward</h2>
+<br>
+  <a href = '/index'>
+    <button type="button" class="btn btn-primary btn-large">CLICK HERE TO PREDICT</button>
+  </a>
+<br>
+        <h4 class="text-warning">Don't Know About Titanic History??, Then Watch This Video</h4>
+</div>
+<br>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" width="500" height="300"
+            src="https://www.youtube.com/embed/SVLt9UfO3Q0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+</iframe>
+</div>
+        <h5 class="text-danger">Thanks DOCUMENTARY CHANNEL (YouTube) For This Video</h5>
+<br>
+<!-- page content end -->
+{% endblock %}
+<!-- footer -->
+<footer style="background-color: black">
+<div class="container">
+<div class="row">
+    <div class="col-md-4 text-center text-md-left">
+        <div class="py-0">
+            <h3 class="my-4 text-white">TSP APP</h3>
+            <p class="footer-links font-weight-bold">
+                <a class="text-white" href="/">HOME</a>
+                |
+                <a class="text-white" href="/about">ABOUT</a>
+                |
+                <a class="text-white" href="/contact">CONTACT</a>
+            </p>
+            <p class="text-light py-4 mb-4">&copy;2021mayursalokheTSP</p>
+        </div>
+    </div>
+    <div class="col-md-4 text-white text-center text-md-left">
+        <div class="py-2 my-4">
+            <div>
+                <p class="text-white"> <i class="fa fa-map-marker mx-2"></i>
+                Mumbai,India.
+                </p>
+            </div>
+            <div>
+                <p><i class="fa fa-phone mx-2"></i>+91 8850331960</p>
+            </div>
+            <div>
+                <p><i class="fa fa-envelope mx-2"></i><a href="mailto:mayursalokhe9201@gmail.com">EMail</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 text-white my-4 text-center text-md-left">
+        <span class="font-weight-bold">About this app</span>
+        <p class="text-warning my-2">This app is made for fun, For those who wants to know about there imaginary titanic journey.</p>
+        <div class="py-2">
+            <a href="https://www.facebook.com/mayur.salokhe.71"> FACEBOOK </a>
+            <a href="https://www.instagram.com/mayur_9745"> INSTAGRAM </a>
+            <a href="https://twitter.com/MayurSalokhe1?s=09"> TWITTER </a>
+        </div>
+    </div>
+</div>
+</div>
+</footer>
+</body>
+</html>

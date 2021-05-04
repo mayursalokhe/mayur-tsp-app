@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <style>
+        body{
+          color:#222222;
+          font-size: 1em;
+          font-family: "Open Sans","Helvetica Neue", sans-serif;
+        }
+        .masthead-content,
+        .masthead-intro {
+          text-align:center;
+        }
+        .masthead{
+          padding:6em 0;
+          background-image:url('static/woodbg.jpeg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-top: solid 1em white;
+        }
+        .masthead-intro{
+          color:white;
+          margi-bottom:0.1em;
+          font-family: "Gentium Book Basic",Georgia,serif;
+          font-size:2em;
+        }
+        .masthead-content{
+          color:#0C090A;
+          margin- top:-0.2em;
+          front-family: "open sans","helvetica Neue", sans-
+         serif;
+          front-weight:bold;
+          front-size: 6em;
+          letter-spacing: -0.02em;
+          text-transform:uppercase;
+         }
+    </style>
+</head>
+<body>
+{% extends 'home.html' %}
+{% block content %}
+<div class="masthead">
+    <h2 class="text-black text-center">ABOUT ME</h2>
+    <p class = "masthead-intro">Hi I'm</p>
+    <h1 class = "masthead-content">Mayur</h1>
+        <h1 class = "masthead-intro">Introduction</h1>
+    <h5 class = "masthead-content">IT Student <br>
+        Skills: Python, Web development, ML
+        Other Projects: Music Player for desktop, Tic-Tac-Toe game for desktop</h5>
+        <h1 class = "masthead-intro">Where I'm from</h1>
+    <h5 class = "masthead-content">I'm originally from mumbai, India.</h5>
+</div>
+{% endblock %}
+</body>
+</html>
